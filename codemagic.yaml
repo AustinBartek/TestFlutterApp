@@ -6,14 +6,12 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Flutter clean & get
+      - name: Clean & get packages
         script: |
           flutter clean
           flutter pub get
-
       - name: Build IPA (no signing)
         script: |
-          flutter build ipa --release --no-codesign
-
+          flutter build ipa --release --no-codesign --export-path build/ios/ipa
     artifacts:
       - build/ios/ipa/*.ipa
