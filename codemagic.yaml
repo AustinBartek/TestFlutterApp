@@ -7,7 +7,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: development
-        bundle_indentifier: com.austinbartek.testFlutterApp
+        bundle_indentifier: com.example.test_flutter_app
     scripts:
       - name: Clean & get packages
         script: |
